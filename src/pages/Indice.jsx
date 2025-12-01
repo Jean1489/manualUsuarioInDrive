@@ -1,39 +1,45 @@
-export default function Indice({ onNavigate }) {
-
-    const items = [
-        { id: "portada", label: "Portada" },
-        { id: "introduccion", label: "Introducción" },
-        { id: "requisitos", label: "Requisitos" },
-        { id: "instalacion", label: "Instalación" },
-        { id: "interfaz", label: "Interfaz" },
-        { id: "funciones", label: "Funciones" },
-        { id: "solucion-problemas", label: "Solución de Problemas" },
-        { id: "mantenimiento", label: "Mantenimiento" },
-        { id: "soporte", label: "Soporte" },
-        { id: "glosario", label: "Glosario" },
-        { id: "apendices", label: "Apéndices" },
+export default function IndexPage({ setActivePage }) {
+    const sections = [
+        { id: "introduccion", name: "Introducción" },
+        { id: "requisitos", name: "Requisitos Técnicos" },
+        { id: "instalacion", name: "Instalación" },
+        { id: "interfaz", name: "Interfaz de Usuario" },
+        { id: "funciones", name: "Funciones Principales" },
+        { id: "solucion-problemas", name: "Solución de Problemas" },
+        { id: "mantenimiento", name: "Mantenimiento y Actualizaciones" },
+        { id: "soporte", name: "Soporte y Contacto" },
+        { id: "glosario", name: "Glosario" },
+        { id: "apendices", name: "Apéndices" },
     ];
 
     return (
-        <div className="p-6">
-            <h1 className="text-3xl font-bold text-green-700 mb-6">
-                Índice del Manual
-            </h1>
+        <div className="animate-fadeIn p-8">
+            <h1 className="text-3xl font-bold text-neutral-900 mb-4">Índice</h1>
+            <p className="text-neutral-600 mb-8">
+                Selecciona una sección para navegar por el manual de usuario.
+            </p>
 
-            <div className="space-y-3">
-                {items.map((item) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                {sections.map((sec) => (
                     <button
-                        key={item.id}
-                        onClick={() => onNavigate(item.id)}
+                        key={sec.id}
+                        onClick={() => setActivePage(sec.id)}
                         className="
-                            block w-full text-left px-4 py-3 bg-white
-                            border rounded-lg shadow-sm hover:bg-green-50
-                            transition text-gray-700 font-medium
-                        "
+              p-5 bg-white rounded-xl border border-neutral-200 shadow-sm
+              hover:bg-indrive/10 hover:border-indrive transition-all
+              text-left animate-fadeIn
+            "
                     >
-                        {item.label}
+                        <h3 className="text-lg font-semibold text-neutral-900">
+                            {sec.name}
+                        </h3>
+                        <p className="text-neutral-500 text-sm mt-1">
+                            Ver sección →
+                        </p>
                     </button>
                 ))}
+
             </div>
         </div>
     );
