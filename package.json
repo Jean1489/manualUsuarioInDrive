@@ -1,0 +1,35 @@
+{
+  "name": "manualusuarioindrive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "tailwindcss",
+    "manual",
+    "indrive"
+  ],
+  "author": "Yhan Carlos Trujillo",
+  "license": "MIT",
+  "description": "Manual interactivo del sistema InDrive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jean1489/manualUsuarioInDrive.git"
+  },
+  "dependencies": {
+    "lucide-react": "^0.555.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.4"
+  }
+}
