@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Menu, Book, Home, List } from "lucide-react";
 
-import IndexPage from "./pages/indice";
-import PortadaPage from "./pages/portada";
+import IndexPage from "./pages/Indice";
+import PortadaPage from "./pages/Portada";
 
 const pages = [
     { id: "portada", name: "Portada", icon: Home, component: <PortadaPage /> },
