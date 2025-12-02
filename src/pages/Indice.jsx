@@ -16,11 +16,11 @@ export default function IndexPage({ setActivePage }) {
         <div className="animate-fadeIn p-8">
             {/* Header */}
             <header className="mb-8">
-                <h1 className="text-3xl font-bold text-neutral-900">
+                <h1 className="text-3xl font-bold text-accent">
                     Índice General
                 </h1>
 
-                <p className="text-neutral-600 mt-2 max-w-xl">
+                <p className="text-accent/70 mt-2 max-w-xl">
                     Explora cada sección del manual para conocer cómo funciona InDrive
                     y aprender a aprovechar todas sus herramientas.
                 </p>
@@ -28,30 +28,37 @@ export default function IndexPage({ setActivePage }) {
 
             {/* Grid de tarjetas */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {sections.map((sec) => (
+                {sections.map((sec, index) => (
                     <button
                         key={sec.id}
                         onClick={() => setActivePage(sec.id)}
                         className="
-                            group p-6 rounded-xl border border-neutral-200 bg-white shadow-sm
+                            group p-6 rounded-xl border-2 border-secondary/30 bg-white shadow-sm
                             text-left transition-all duration-200 animate-fadeIn
-                            hover:shadow-md hover:border-indrive hover:bg-indrive/10
-                            focus:outline-none focus:ring-2 focus:ring-indrive
+                            hover:shadow-lg hover:border-secondary hover:bg-secondary/5
+                            focus:outline-none focus:ring-2 focus:ring-secondary
                         "
+                        style={{ animationDelay: `${index * 0.05}s` }}
                     >
+                        {/* Número de sección */}
+                        <div className="w-8 h-8 rounded-lg bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center mb-3 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            {index + 1}
+                        </div>
+
                         {/* Título */}
-                        <h3 className="text-lg font-semibold text-neutral-900 group-hover:text-indrive transition-colors">
+                        <h3 className="text-lg font-semibold text-accent group-hover:text-secondary transition-colors">
                             {sec.name}
                         </h3>
 
                         {/* Descripción */}
-                        <p className="text-neutral-500 text-sm mt-1">
+                        <p className="text-accent/60 text-sm mt-2 leading-relaxed">
                             {sec.desc}
                         </p>
 
                         {/* CTA */}
-                        <p className="text-indrive font-medium mt-3 flex items-center gap-1">
-                            Abrir sección →
+                        <p className="text-secondary font-medium mt-4 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Abrir sección
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
                         </p>
                     </button>
                 ))}

@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-    /* Colores personalizados */
-    --color-indrive: #00cd63;
-    --color-indrive-dark: #00a94f;
+    /* Colores principales - Sistema de color actualizado */
+    --color-primary: #FEFFE7;
+    /* 60% - Color dominante (fondos, áreas grandes) */
+    --color-secondary: #89A926;
+    /* 30% - Color secundario (acentos, sidebar) */
+    --color-accent: #596F20;
+    /* 10% - Color de acento (botones, highlights) */
+
+    /* Alias para usar en componentes */
+    --color-bg-main: #FEFFE7;
+    --color-sidebar: #89A926;
+    --color-highlight: #596F20;
+    --color-highlight-dark: #475917;
 
     /* Fuentes personalizadas */
     --font-family-sans: "Inter", system-ui, sans-serif;
@@ -14,13 +24,17 @@
     width: 8px;
 }
 
+::-webkit-scrollbar-track {
+    background: #FEFFE7;
+}
+
 ::-webkit-scrollbar-thumb {
-    background: #00cd63;
+    background: #89A926;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00a94f;
+    background: #596F20;
 }
 
 /* Animaciones personalizadas */
@@ -36,6 +50,22 @@
     }
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .animate-fadeIn {
     animation: fadeIn 0.25s ease-out;
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out;
 }
