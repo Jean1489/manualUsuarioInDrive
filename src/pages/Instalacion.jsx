@@ -1,3 +1,11 @@
+import googlePlayBadge from '../assets/google-play-badge.png';
+import appStoreBadge from '../assets/app-store-badge.png';
+import ios1 from '../assets/ios1.jpg';
+import ios2 from '../assets/ios2.jpg';
+import android1 from '../assets/android1.jpg';
+import android2 from '../assets/android2.jpg';
+
+
 export default function InstalacionPage() {
     return (
         <div className="p-8 animate-fadeIn">
@@ -40,7 +48,7 @@ export default function InstalacionPage() {
                         className="block mt-6 w-fit"
                     >
                         <img
-                            src="/images/google-play-badge.png"
+                            src={googlePlayBadge}
                             alt="Descargar en Google Play"
                             className="h-12 hover:scale-105 transition-transform"
                         />
@@ -51,10 +59,18 @@ export default function InstalacionPage() {
                         <p className="font-semibold text-secondary mb-2">Capturas de ejemplo:</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="aspect-[9/16] bg-neutral-100 rounded-xl border border-neutral-300 flex items-center justify-center text-neutral-500">
-                                Imagen 1
+                                <img
+                                    src={android1}
+                                    alt="Android Imagen 1"
+
+                                />
                             </div>
                             <div className="aspect-[9/16] bg-neutral-100 rounded-xl border border-neutral-300 flex items-center justify-center text-neutral-500">
-                                Imagen 2
+                                <img
+                                    src={android2}
+                                    alt="Android Imagen 2"
+
+                                />
                             </div>
                         </div>
                     </div>
@@ -90,7 +106,7 @@ export default function InstalacionPage() {
                         className="block mt-6 w-fit"
                     >
                         <img
-                            src="/images/app-store-badge.png"
+                            src={appStoreBadge}
                             alt="Descargar en App Store"
                             className="h-12 hover:scale-105 transition-transform"
                         />
@@ -101,10 +117,18 @@ export default function InstalacionPage() {
                         <p className="font-semibold text-secondary mb-2">Capturas de ejemplo:</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="aspect-[9/16] bg-neutral-100 rounded-xl border border-neutral-300 flex items-center justify-center text-neutral-500">
-                                iOS Imagen 1
+                                <img
+                                    src={ios1}
+                                    alt="iOS Imagen 1"
+
+                                />
                             </div>
                             <div className="aspect-[9/16] bg-neutral-100 rounded-xl border border-neutral-300 flex items-center justify-center text-neutral-500">
-                                iOS Imagen 2
+                                <img
+                                    src={ios2}
+                                    alt="iOS Imagen 2"
+
+                                />
                             </div>
                         </div>
                     </div>
