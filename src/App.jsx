@@ -22,7 +22,7 @@ import IntroduccionPage from "./pages/Introduccion";
 import RequisitosPage from "./pages/Requisitos";
 import InstalacionPage from "./pages/Instalacion";
 import InterfazPage from "./pages/Interfaz";
-//import FuncionesPrincipalesPage from "./pages/FuncionesPrincipales";
+import FuncionesPage from "./pages/Funciones";
 import SolucionProblemasPage from "./pages/SolucionProblemas";
 import MantenimientoPage from "./pages/Mantenimiento";
 import SoportePage from "./pages/Soporte";
@@ -40,7 +40,7 @@ export default function App() {
         { id: "requisitos", name: "Requisitos Técnicos", icon: CheckSquare, component: <RequisitosPage /> },
         { id: "instalacion", name: "Instalación", icon: Download, component: <InstalacionPage /> },
         { id: "interfaz", name: "Interfaz de Usuario", icon: Layout, component: <InterfazPage /> },
-        //{ id: "funciones", name: "Funciones Principales", icon: Zap, component: <FuncionesPrincipalesPage /> },
+        { id: "funciones", name: "Funciones Principales", icon: Zap, component: <FuncionesPage /> },
         { id: "solucion-problemas", name: "Solución de Problemas", icon: AlertCircle, component: <SolucionProblemasPage /> },
         { id: "mantenimiento", name: "Mantenimiento y Actualizaciones", icon: Settings, component: <MantenimientoPage /> },
         { id: "soporte-contacto", name: "Soporte y Contacto", icon: MessageCircle, component: <SoportePage /> },
